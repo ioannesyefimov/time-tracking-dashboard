@@ -1,0 +1,152 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+}
+
+.main-outer-container {
+  display: grid;
+  padding: 4rem 1rem;
+}
+.main-outer-container .main-inner-container {
+  display: grid;
+  gap: 1.25rem;
+}
+.main-outer-container .main-inner-container .side-card {
+  display: grid;
+}
+.main-outer-container .main-inner-container .side-card .side-card-sect1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.main-outer-container .main-inner-container .side-card .flex-wrapper {
+  flex-grow: 1;
+}
+.main-outer-container .main-inner-container .side-card .side-card-sect2 {
+  display: flex;
+  justify-content: space-around;
+}
+.main-outer-container .main-inner-container .activity.cards {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.activity-cards .activity-card {
+  padding: 1rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 20% 1fr;
+}
+.activity-cards .activity-card .main-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.activity-cards .activity-card .time-period-wrapper {
+  display: flex;
+}
+.activity-cards .work-card {
+  display: grid;
+}
+
+.side-card .side-card-sect1 {
+  border-radius: 1rem 1rem 0 0;
+  padding: 2rem 1.5rem;
+  background: hsl(246deg, 80%, 60%);
+}
+.side-card .side-card-sect1 .card-photo {
+  max-width: 5rem;
+}
+.side-card .side-card-sect1 .card-photo img {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.side-card .side-card-sect1 .flex-wrapper span {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 1rem;
+}
+.side-card .side-card-sect1 .flex-wrapper p {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.side-card .side-card-sect2 {
+  border-radius: 0 0 1rem 1rem;
+  background: hsl(235deg, 46%, 20%);
+  padding: 1rem;
+}
+.side-card .side-card-sect2 .side-card-period {
+  background: transparent;
+  border: none;
+  color: hsl(235deg, 45%, 61%);
+}
+.side-card .side-card-sect2 .side-card-period__active {
+  color: hsl(0deg, 0%, 100%) !important;
+  font-weight: 500;
+}
+
+.activity-card .img-work {
+  background: hsl(15deg, 100%, 70%) url("./images/icon-work.svg");
+  height: 40px;
+}

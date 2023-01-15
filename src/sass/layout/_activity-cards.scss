@@ -1,0 +1,29 @@
+@use '../abstract/variables' as *;
+
+.activity-cards {
+    
+    .activity-card {
+        padding: 1rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template-rows: 20% 1fr;
+        
+        .image-card {
+        }
+
+        .main-card-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        .time-period-wrapper {
+            display: flex;
+        }
+        
+        
+    }
+    .work-card {
+        display: grid;
+      
+    }
+
+}

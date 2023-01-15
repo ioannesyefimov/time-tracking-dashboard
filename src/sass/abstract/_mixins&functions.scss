@@ -1,0 +1,5 @@
+@use './variables' as *;
+
+@function weights($weight){
+    @return map-get($f-weights , $weight )
+}

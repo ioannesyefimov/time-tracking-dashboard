@@ -1,0 +1,50 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins&functions' as *;
+
+.side-card {
+    .side-card-sect1 {
+        border-radius: 1rem 1rem 0 0;
+
+        padding: 2rem 1.5rem;
+        background: $clr-p-blue;
+    
+        .card-photo {
+            max-width: 5rem;
+
+            img {
+             border: 3px solid white;
+                border-radius: 50%;
+            }
+        }
+        .flex-wrapper {
+            span {
+                color: $clr-n-p-blue;
+                font-size: 1rem;
+            }
+            p {
+                color: $clr-n-white;
+                font-weight: weights(bold);
+                font-size: 1.5rem;
+                line-height: 1;
+            }
+        }
+    }
+    .side-card-sect2{
+        border-radius: 0 0 1rem 1rem ;
+        background: $clr-n-d-blue;
+        padding: 1rem;
+
+        .side-card-period {
+            background: transparent;
+            border: none;
+            color: $clr-n-desat-blue;
+        }
+        .side-card-period__active {
+            color: $clr-n-white !important;
+            font-weight: weights(bold);
+        }
+
+
+
+    }
+}

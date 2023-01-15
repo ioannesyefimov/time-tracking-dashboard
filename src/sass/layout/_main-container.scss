@@ -1,0 +1,33 @@
+.main-outer-container {
+    display: grid;
+    padding: 4rem 1rem;
+    .main-inner-container {
+        display: grid;
+        gap: 1.25rem;
+        
+        .side-card {
+            display: grid;
+
+            .side-card-sect1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                .card-photo{
+                }
+            }
+            .flex-wrapper {
+                flex-grow: 1;
+            }
+            .side-card-sect2{
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        .activity.cards {
+
+            display: grid;
+            gap: 1.25rem;
+        }
+    }
+}

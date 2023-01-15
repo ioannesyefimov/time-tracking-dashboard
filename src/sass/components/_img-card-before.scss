@@ -1,0 +1,8 @@
+@use '../abstract/variables' as *;
+
+.activity-card {
+    .img-work{
+        background: $clr-p-l-red url('./images/icon-work.svg');
+        height: 40px;
+    }
+}

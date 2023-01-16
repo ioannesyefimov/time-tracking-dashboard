@@ -1,29 +1,74 @@
 @use '../abstract/variables' as *;
+@use '../abstract/mixins&functions' as *;
 
 .activity-cards {
-    
-    .activity-card {
-        padding: 1rem;
-        border-radius: 1rem;
-        display: grid;
-        grid-template-rows: 20% 1fr;
-        
-        .image-card {
-        }
-
-        .main-card-wrapper {
-            display: flex;
-            justify-content: space-between;
-        }
-        .time-period-wrapper {
-            display: flex;
-        }
-        
-        
+    @include respond-to(medium){
+        grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+        gap: 1rem ;
+        grid-template-rows: repeat(minmax(1,2), minmax(5rem, 1fr));
     }
-    .work-card {
+
+    display: grid;
+    gap:1.5rem;
+    .activity-card {
+
+
         display: grid;
-      
+        grid-template-rows: 2.3rem 1fr ;      
+          
+       
+
+        .card-image {
+            grid-row: 1/2;
+        }
+        .card-wrapper {
+            @include respond-to(medium){
+                grid-template-areas: 
+                    'main-wrapper main-wrapper'
+                    'act-time act-time'
+                    'time-period time-period'
+                ;
+            }
+            
+            padding:  1rem;
+            // z-index: 1;
+            border-radius: 1rem;
+            grid-row: 2/3;
+
+
+            display: grid;
+            grid-template-areas: 
+                'main-wrapper main-wrapper' 
+                'act-time time-period'
+            ;
+            .main-card-wrapper {
+                display: flex;
+                justify-content: space-between;
+                grid-area: main-wrapper;
+            }
+            .time-period-wrapper {
+                @include respond-to(medium){
+                }
+
+                display: flex;
+                gap:1rem;
+                grid-area: time-period;
+                
+            }
+            .activity-time {
+                grid-area: act-time;
+            }
+            .period-time {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: '-';
+                    left: 105%;
+                }
+            }
+           
+        }
+        
     }
 
 }

@@ -7,3 +7,39 @@ body {
 }
 
 
+.side-card{
+    .flex-wrapper {
+        
+        .credentials {
+            @include respond-to(medium){
+                font-size: 2.1rem !important;
+            }
+            font-size: 1.4rem ;
+        }
+    }
+}
+
+.activity-card {
+    .main-card-wrapper {
+        .type-activity{
+            @include respond-to(medium){
+                font-size: 1rem;
+            }
+            font-size: 1.25rem;
+        }
+    }
+    .activity-time {
+        @include respond-to(medium){
+            font-size: 2.5rem;
+        }
+        font-size: 2rem;
+    }
+    .time-period-wrapper {
+        @include respond-to(medium){
+            font-size: .8rem;
+        }
+        font-size: 1rem;
+
+    }
+}
+

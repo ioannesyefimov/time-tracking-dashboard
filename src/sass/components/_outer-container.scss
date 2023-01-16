@@ -1,0 +1,9 @@
+@use '../abstract/variables' as *;
+
+.main-outer-container {
+    background-color: $clr-n-v-d-blue;
+
+    .attribution {
+        grid-column: 1/-1;
+    }
+}

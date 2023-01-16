@@ -1,0 +1,56 @@
+@use '../abstract/variables' as * ;
+@use '../abstract/mixins&functions' as *;
+
+.side-card {
+
+
+
+    @include respond-to(medium){
+        grid-template-rows: 60% 1rem 1fr; 
+    }
+    
+    display: grid;
+    grid-template-rows: 1fr  1rem 3.8rem;
+
+    .side-card-sect1 {
+        @include respond-to(medium){
+            display: grid;
+            align-items: flex-start;
+            grid-template-rows: minmax(3rem, 5rem)  1fr;
+
+            grid-row: 1/3;
+        }
+        border-radius: 1rem ;
+         padding: 2rem 1.5rem;
+        position: relative;
+        z-index: 1;
+        grid-row: 1/3;
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .flex-wrapper {
+        flex-grow: 1;
+    }
+    .side-card-sect2{
+        @include respond-to(medium){
+            flex-direction: column;
+            padding: 3.5rem 1rem !important;
+        }
+        z-index: 0;
+        grid-row: 2/4;
+        grid-column: 1/-1;
+
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        align-items: flex-start;
+    
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

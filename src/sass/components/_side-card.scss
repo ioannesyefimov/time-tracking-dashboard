@@ -3,13 +3,11 @@
 
 .side-card {
     .side-card-sect1 {
-        border-radius: 1rem 1rem 0 0;
-
-        padding: 2rem 1.5rem;
+        
         background: $clr-p-blue;
     
         .card-photo {
-            max-width: 5rem;
+            max-width: 4.5rem;
 
             img {
              border: 3px solid white;
@@ -19,11 +17,13 @@
         .flex-wrapper {
             span {
                 color: $clr-n-p-blue;
+                font-weight: weights(regular);
+
                 font-size: 1rem;
             }
             p {
                 color: $clr-n-white;
-                font-weight: weights(bold);
+                font-weight: weights(light);
                 font-size: 1.5rem;
                 line-height: 1;
             }
@@ -32,16 +32,30 @@
     .side-card-sect2{
         border-radius: 0 0 1rem 1rem ;
         background: $clr-n-d-blue;
-        padding: 1rem;
+        padding: 1rem 0;
 
         .side-card-period {
             background: transparent;
             border: none;
-            color: $clr-n-desat-blue;
+            a{
+                font-weight: weights(light);
+                color: $clr-n-desat-blue;
+                text-decoration: none;
+                
+
+                &:hover {
+                    color: $clr-n-white
+                }
+            }
+
         }
-        .side-card-period__active {
-            color: $clr-n-white !important;
-            font-weight: weights(bold);
+        .side-card-period__active  {
+
+            a{
+                color: $clr-n-white !important;
+                font-weight: weights(regular);
+                
+            }
         }
 
 

@@ -1,0 +1,34 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins&functions' as * ;
+
+.activity-card {
+ 
+    .card-wrapper {
+        transition: .5s ease-in-out;
+
+      background-color: $clr-n-d-blue;
+
+        .time-period-wrapper {
+            color: $clr-n-desat-blue;
+            
+            font-weight: weights(regular);
+           align-self: center;
+        }
+        .type-activity{
+            color: $clr-n-white;
+            font-weight: weights(bold);
+
+        }
+        
+        .activity-time {
+            color: $clr-n-white;
+            font-weight: weights(light);
+
+        }
+        &:hover {
+            cursor: pointer;
+            filter: brightness(150%);
+        }
+    }
+    
+}

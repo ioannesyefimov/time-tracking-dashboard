@@ -1,33 +1,30 @@
+@use '../abstract/mixins&functions' as * ;
+
 .main-outer-container {
+    @include respond-to(medium){
+        padding: clamp(4rem, -10.519rem + 28.354vw, 10rem) clamp(1rem, -10.519rem + 28.354vw, 15rem);   
+        margin: auto 0;
+        height: 100vh;
+
+    }
     display: grid;
     padding: 4rem 1rem;
+
+
     .main-inner-container {
+        @include respond-to(medium){
+            padding: 0;
+            grid-template-columns: minmax(8rem, 14rem)  1fr ;
+            grid-template-areas: 
+                'side-c main-card '
+                'side-c main-card'
+                'side-c main-card'
+            ;
+        }
         display: grid;
-        gap: 1.25rem;
+        gap: 1.6rem;
         
-        .side-card {
-            display: grid;
-
-            .side-card-sect1 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
-                .card-photo{
-                }
-            }
-            .flex-wrapper {
-                flex-grow: 1;
-            }
-            .side-card-sect2{
-                display: flex;
-                justify-content: space-around;
-            }
-        }
-        .activity.cards {
-
-            display: grid;
-            gap: 1.25rem;
-        }
+        
+        
     }
 }

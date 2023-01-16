@@ -1,8 +1,37 @@
 @use '../abstract/variables' as *;
+@use '../abstract/mixins&functions' as *;
 
 .activity-card {
+    div[class*="img-"]{
+        height: 55px;
+        border-radius: 15px 15px 0 0 ;
+        ;
+    }
+    .card-wrapper {
+    }
+
+
+
     .img-work{
-        background: $clr-p-l-red url('./images/icon-work.svg');
-        height: 40px;
+        @include setCardBg($clr-p-l-red, 'icon-work');
+    }
+    .img-play {
+        @include setCardBg($clr-p-s-blue, 'icon-play' );
+    }
+    .img-study {
+        @include setCardBg($clr-p-l-red-study, 'icon-study');
+
+    }
+    .img-exercise {
+        @include setCardBg($clr-p-l-green, 'icon-exercise');
+
+    }
+    .img-social {
+        @include setCardBg($clr-p-violet, 'icon-social');
+
+    }
+    .img-self-care {
+        @include setCardBg($clr-p-s-orange, 'icon-self-care');
+
     }
 }

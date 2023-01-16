@@ -2,4 +2,31 @@
 
 @function weights($weight){
     @return map-get($f-weights , $weight )
+};
+
+@mixin setCardBg($clr, $path){
+    background-color: $clr ;
+    background-image:url("../images/#{$path}.svg");
+    background-position: 95% 33%;
+    background-repeat: no-repeat;
+    background-size: min(5rem, 30%);
 }
+
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+    
+    @if $raw-query {
+        $query: if(
+            type-of($raw-query) == 'string',
+            unquoute($raw-query),
+            inspect($raw-query)
+        );
+
+        @media #{$query}{
+             @content;
+        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in `#{$breakpoints}` map.'
+    }
+}
+

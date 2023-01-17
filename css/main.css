@@ -1,0 +1,380 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+}
+
+.side-card .flex-wrapper .credentials {
+  font-size: 1.4rem;
+}
+@media (min-width: 650px) {
+  .side-card .flex-wrapper .credentials {
+    font-size: 2.1rem !important;
+  }
+}
+
+.activity-card .main-card-wrapper .type-activity {
+  font-size: 1.25rem;
+}
+@media (min-width: 650px) {
+  .activity-card .main-card-wrapper .type-activity {
+    font-size: clamp(1rem, 0.671rem + 0.81vw, 1.2rem);
+  }
+}
+.activity-card .activity-time {
+  font-size: 2rem;
+}
+@media (min-width: 650px) {
+  .activity-card .activity-time {
+    font-size: clamp(2.5rem, 2.089rem + 1.013vw, 3rem);
+  }
+}
+.activity-card .time-period-wrapper {
+  font-size: 1rem;
+}
+@media (min-width: 650px) {
+  .activity-card .time-period-wrapper {
+    font-size: clamp(0.8rem, 0.471rem + 0.81vw, 1.2rem);
+  }
+}
+
+.main-outer-container {
+  display: grid;
+  padding: 4rem 1rem;
+}
+@media (min-width: 650px) {
+  .main-outer-container {
+    padding: clamp(1rem, -10.519rem + 28.354vw, 13rem);
+    margin: auto 0;
+    min-height: 100vh;
+  }
+}
+.main-outer-container .main-inner-container {
+  display: grid;
+  gap: 1.6rem;
+}
+@media (min-width: 650px) {
+  .main-outer-container .main-inner-container {
+    padding: 0;
+    grid-template-columns: minmax(8rem, 16rem) 1fr;
+    grid-template-areas: "side-c main-card " "side-c main-card" "side-c main-card";
+  }
+}
+@media (min-width: 650px) {
+  .main-outer-container .main-inner-container .side-card {
+    grid-area: side-c;
+  }
+}
+@media (min-width: 650px) {
+  .main-outer-container .main-inner-container .activity-cards {
+    grid-area: main-card;
+  }
+}
+
+.activity-cards {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 650px) {
+  .activity-cards {
+    grid-template-columns: repeat(auto-fit, minmax(max(10rem, 15vw), 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(5rem, 1fr));
+  }
+}
+.activity-cards .activity-card {
+  display: grid;
+  grid-template-rows: 2.3rem 1fr;
+}
+@media (min-width: 650px) {
+  .activity-cards .activity-card {
+    height: 15rem;
+  }
+}
+.activity-cards .activity-card .card-image {
+  grid-row: 1/2;
+}
+.activity-cards .activity-card .card-wrapper {
+  padding: 1rem;
+  border-radius: 1rem;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-areas: "main-wrapper main-wrapper" "act-time time-period";
+}
+@media (min-width: 650px) {
+  .activity-cards .activity-card .card-wrapper {
+    grid-template-areas: "main-wrapper main-wrapper" "act-time act-time" "time-period time-period";
+  }
+}
+.activity-cards .activity-card .card-wrapper .main-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  grid-area: main-wrapper;
+}
+@media (min-width: 650px) {
+  .activity-cards .activity-card .card-wrapper .main-card-wrapper {
+    align-self: flex-start;
+  }
+}
+.activity-cards .activity-card .card-wrapper .time-period-wrapper {
+  display: flex;
+  gap: 1rem;
+  grid-area: time-period;
+}
+@media (min-width: 650px) {
+  .activity-cards .activity-card .card-wrapper .time-period-wrapper {
+    align-self: flex-start;
+  }
+}
+.activity-cards .activity-card .card-wrapper .activity-time {
+  grid-area: act-time;
+}
+.activity-cards .activity-card .card-wrapper .period-time {
+  position: relative;
+}
+.activity-cards .activity-card .card-wrapper .period-time::after {
+  position: absolute;
+  content: "-";
+  left: 105%;
+}
+
+.side-card {
+  display: grid;
+  grid-template-rows: 1fr 1rem 3.8rem;
+}
+@media (min-width: 650px) {
+  .side-card {
+    grid-template-rows: 60% 1rem 1fr;
+  }
+}
+.side-card .side-card-sect1 {
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  position: relative;
+  z-index: 1;
+  grid-row: 1/3;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 650px) {
+  .side-card .side-card-sect1 {
+    display: grid;
+    align-items: flex-start;
+    grid-template-rows: minmax(3rem, 5rem) 1fr;
+    grid-row: 1/3;
+  }
+}
+.side-card .flex-wrapper {
+  flex-grow: 1;
+}
+.side-card .side-card-sect2 {
+  z-index: 0;
+  grid-row: 2/4;
+  grid-column: 1/-1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+@media (min-width: 650px) {
+  .side-card .side-card-sect2 {
+    flex-direction: column;
+    padding: 3.5rem 1rem !important;
+  }
+}
+.side-card .side-card-sect2:hover {
+  cursor: pointer;
+}
+
+.side-card .side-card-sect1 {
+  background: hsl(246deg, 80%, 60%);
+}
+.side-card .side-card-sect1 .card-photo {
+  max-width: 4.5rem;
+}
+.side-card .side-card-sect1 .card-photo img {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.side-card .side-card-sect1 .flex-wrapper span {
+  color: hsl(236deg, 100%, 87%);
+  font-weight: 400;
+  font-size: 1rem;
+}
+.side-card .side-card-sect1 .flex-wrapper p {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.side-card .side-card-sect2 {
+  border-radius: 0 0 1rem 1rem;
+  background: hsl(235deg, 46%, 20%);
+  padding: 1rem 0;
+}
+.side-card .side-card-sect2 .side-card-period {
+  background: transparent;
+  border: none;
+}
+.side-card .side-card-sect2 .side-card-period p {
+  font-weight: 300;
+  color: hsl(235deg, 45%, 61%);
+  text-decoration: none;
+}
+.side-card .side-card-sect2 .side-card-period p:hover {
+  color: hsl(0deg, 0%, 100%);
+}
+.side-card .side-card-sect2 .active p {
+  color: hsl(0deg, 0%, 100%) !important;
+  font-weight: 400;
+}
+
+.activity-card div[class*=img-] {
+  height: 55px;
+  border-radius: 15px 15px 0 0;
+}
+.activity-card .img-work {
+  background-color: hsl(15deg, 100%, 70%);
+  background-image: url("../images/icon-work.svg");
+  background-position: 95% 33%;
+  background-repeat: no-repeat;
+  background-size: min(5rem, 30%);
+}
+.activity-card .img-play {
+  background-color: hsl(195deg, 74%, 62%);
+  background-image: url("../images/icon-play.svg");
+  background-position: 95% 33%;
+  background-repeat: no-repeat;
+  background-size: min(5rem, 30%);
+}
+.activity-card .img-study {
+  background-color: hsl(348deg, 100%, 68%);
+  background-image: url("../images/icon-study.svg");
+  background-position: 95% 33%;
+  background-repeat: no-repeat;
+  background-size: min(5rem, 30%);
+}
+.activity-card .img-exercise {
+  background-color: hsl(145deg, 58%, 55%);
+  background-image: url("../images/icon-exercise.svg");
+  background-position: 95% 33%;
+  background-repeat: no-repeat;
+  background-size: min(5rem, 30%);
+}
+.activity-card .img-social {
+  background-color: hsl(264deg, 64%, 52%);
+  background-image: url("../images/icon-social.svg");
+  background-position: 95% 33%;
+  background-repeat: no-repeat;
+  background-size: min(5rem, 30%);
+}
+.activity-card .img-self-care {
+  background-color: hsl(43deg, 84%, 65%);
+  background-image: url("../images/icon-self-care.svg");
+  background-position: 95% 33%;
+  background-repeat: no-repeat;
+  background-size: min(5rem, 30%);
+}
+
+.activity-card .card-wrapper {
+  transition: 0.5s ease-in-out;
+  background-color: hsl(235deg, 46%, 20%);
+}
+.activity-card .card-wrapper .time-period-wrapper {
+  color: hsl(235deg, 45%, 61%);
+  font-weight: 400;
+  align-self: center;
+}
+.activity-card .card-wrapper .type-activity {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+}
+.activity-card .card-wrapper .activity-time {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 300;
+}
+.activity-card .card-wrapper:hover {
+  cursor: pointer;
+  filter: brightness(150%);
+}
+
+.main-outer-container {
+  background-color: hsl(226deg, 43%, 10%);
+}
+.main-outer-container .attribution {
+  grid-column: 1/-1;
+  grid-row: -1/-1;
+  align-self: flex-start;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.main-card-wrapper .menu {
+  transition: 0.5s ease-in-out;
+  background: transparent;
+  border: none;
+}
+.main-card-wrapper .menu:hover {
+  filter: brightness(200%) !important;
+  cursor: pointer;
+}

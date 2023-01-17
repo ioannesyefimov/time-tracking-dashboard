@@ -13,7 +13,7 @@
  
   <link rel="stylesheet" href="./css/main.css">
 
-  <script defer src="index.js"></script>
+  <script type="module" src="./index.js"></script>
  
   <title>Frontend Mentor | Time tracking dashboard</title>
 
@@ -34,25 +34,25 @@
           </div>
         </div>
         <div class="side-card-sect2">
-          <button class="side-card-period">
-            Daily
+          <button class="side-card-period" data-period="daily" >
+            <p>Daily</p> 
           </button>
-          <button class="side-card-period side-card-period__active">Weekly</button>
-          <button class="side-card-period">Monthly</button>
+      <button class="side-card-period active" data-period="weekly"><p>Weekly</p> </button>
+      <button class="side-card-period" data-period="monthly"><p>Monthly</p> </button>
         </div>
       </div>
       
-      <div class="activity-cards">
+      <!-- <div class="activity-cards">
         <div class="activity-card work-card">
           <div class="image-card img-work"></div>
           <div class="card-wrapper">
             <div class="main-card-wrapper">
-              <p class="type-activity">Work</p>
+              <p class="type-activity"></p>
               <button class="menu"><img src="./images/icon-ellipsis.svg" alt=""></button>
             </div>
             <h2 class="activity-time">32hrs</h2>
             <div class="time-period-wrapper">
-              <span class="period-time">Last Week - </span>
+              <span class="period-time">Last Week  </span>
               <p class="period-time-hours">36hrs</p>
             </div>
           </div>
@@ -61,12 +61,12 @@
           <div class="image-card img-play"></div>
           <div class="card-wrapper">
             <div class="main-card-wrapper">
-              <p class="type-activity">Play</p>
+              <p class="type-activity"></p>
               <button class="menu"><img src="./images/icon-ellipsis.svg" alt=""></button>
             </div>
             <h2 class="activity-time">10hrs</h2>
             <div class="time-period-wrapper">
-              <span class="period-time">Last Week -</span>
+              <span class="period-time">Last Week </span>
               <p class="period-time-hours">8 hrs</p>
             </div>
           </div>
@@ -75,12 +75,12 @@
           <div class="image-card img-study"></div>
           <div class="card-wrapper">
             <div class="main-card-wrapper">
-              <p class="type-activity">Study</p>
+              <p class="type-activity"></p>
               <button class="menu"><img src="./images/icon-ellipsis.svg" alt=""></button>
             </div>
             <h2 class="activity-time">10hrs</h2>
             <div class="time-period-wrapper">
-              <span class="period-time">Last Wekk -</span>
+              <span class="period-time">Last Wekk </span>
               <p class="period-time-hours">7hrs</p>
             </div>
           </div>
@@ -89,12 +89,12 @@
           <div class="image-card img-exercise"></div>
           <div class="card-wrapper">
             <div class="main-card-wrapper">
-              <p class="type-activity">Exercise</p>
+              <p class="type-activity"></p>
               <button class="menu"><img src="./images/icon-ellipsis.svg" alt=""></button>
             </div>
             <h2 class="activity-time">4hrs</h2>
             <div class="time-period-wrapper">
-              <span class="period-time">Last Week - </span>
+              <span class="period-time">Last Week  </span>
               <p class="period-time-hours">5hrs</p>
             </div>
           </div>
@@ -103,12 +103,12 @@
           <div class="image-card img-social"></div>
           <div class="card-wrapper">
             <div class="main-card-wrapper">
-              <p class="type-activity">Social</p>
+              <p class="type-activity"></p>
               <button class="menu"><img src="./images/icon-ellipsis.svg" alt=""></button>
             </div>
             <h2 class="activity-time ">5hrs</h2>
             <div class="time-period-wrapper">
-              <span class="period-time">Last Week -</span>
+              <span class="period-time">Last Week </span>
               <p class="period-time-hours">10hrs</p>
             </div>
           </div>
@@ -118,18 +118,18 @@
           <div class="image-card img-self-care"></div>
           <div class="card-wrapper">
             <div class="main-card-wrapper">
-              <p class="type-activity">Self Care</p>
+              <p class="type-activity"> Care</p>
               <button class="menu"><img src="./images/icon-ellipsis.svg" alt=""></button>
             </div>
             <h2 class="activity-time">2hrs</h2>
             <div class="time-period-wrapper">
-              <span class="period-time">Last Week - </span>
+              <span class="period-time">Last Week  </span>
               <p class="period-time-hours">2hrs</p>
             </div>
           </div>
         </div>
        </div>
-    </div>
+    </div> -->
 
     <div class="attribution">
       Challenge by <a href="https://github.com/ioannesyefimov" target="_blank">Frontend Mentor</a>. 

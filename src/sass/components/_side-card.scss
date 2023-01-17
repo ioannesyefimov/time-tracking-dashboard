@@ -37,7 +37,7 @@
         .side-card-period {
             background: transparent;
             border: none;
-            a{
+            p{
                 font-weight: weights(light);
                 color: $clr-n-desat-blue;
                 text-decoration: none;
@@ -49,9 +49,9 @@
             }
 
         }
-        .side-card-period__active  {
+        .active  {
 
-            a{
+            p{
                 color: $clr-n-white !important;
                 font-weight: weights(regular);
                 

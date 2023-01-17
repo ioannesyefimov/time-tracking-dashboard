@@ -3,16 +3,17 @@
 
 .activity-cards {
     @include respond-to(medium){
-        grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
-        gap: 1rem ;
-        grid-template-rows: repeat(minmax(1,2), minmax(5rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(max(10rem, 15vw), 1fr));
+        // gap: clamp(1rem, 0.589rem + 1.013vw, 1.5rem) ;
+        grid-template-rows: repeat(auto-fit, minmax(5rem, 1fr));
     }
 
     display: grid;
     gap:1.5rem;
     .activity-card {
-
-
+     @include respond-to(medium){
+        height: 15rem;
+    }
         display: grid;
         grid-template-rows: 2.3rem 1fr ;      
           
@@ -42,12 +43,16 @@
                 'act-time time-period'
             ;
             .main-card-wrapper {
+                @include respond-to(medium){
+                    align-self: flex-start;
+                }
                 display: flex;
                 justify-content: space-between;
                 grid-area: main-wrapper;
             }
             .time-period-wrapper {
                 @include respond-to(medium){
+                    align-self: flex-start;
                 }
 
                 display: flex;

@@ -73,7 +73,8 @@ async function getData(data){
             })
 
         }
-    
+        
+        renderCards(dataObj, 'weekly')
         
     const activateClickedBtn = (btn) => {
        periodBtns.forEach(b => b.classList.remove('active'))
